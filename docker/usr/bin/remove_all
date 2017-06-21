@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SERVERLESS_PARENT_DIR="$PWD"
+
+for SERVERLESS_DIR in $SERVERLESS_PARENT_DIR/*/; do
+    SERVERLESS_FILE=${SERVERLESS_DIR}/serverless.yml
+    if [ -f "$SERVERLESS_FILE" ]; then
+        cd $SERVERLESS_DIR && /usr/bin/remove
+    fi
+    cd $SERVERLESS_PARENT_DIR
+done
+
+echo "Finished removing serverless demos"
+

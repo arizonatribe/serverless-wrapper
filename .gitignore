@@ -1,7 +1,2 @@
 *.log
 .env
-.npmrc
-**/node_modules
-coverage/
-dist/
-build/

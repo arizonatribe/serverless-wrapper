@@ -2,12 +2,9 @@ version: "2"
 services:
     serverless-tutorial:
       build: ./
-      container_name: serverless-tutorial
       image: serverless-tutorial:latest
+      container_name: serverless-tutorial
       env_file: ./.env
-      ports:
-        - 80:3000
       volumes:
         - /var/lib/serverless-tutorial
         - /var/lib/serverless-tutorial/node_modules
-
